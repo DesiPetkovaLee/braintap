@@ -1,0 +1,101 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #191c3f;
+  color: #ffffff;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.game-container {
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.stats,
+.controls {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.card {
+  background: #ff7b35;
+  border-radius: 10px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.card:hover {
+  background: #ffa76d;
+}
+
+.win-message {
+  margin-top: 20px;
+  padding: 15px;
+  background: #00ffc8;
+  color: #000;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  box-shadow: 0 0 10px rgba(0, 255, 200, 0.3);
+  animation: popIn 0.3s ease-in-out;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.light-theme {
+  background: #f1f1f1;
+  color: #111;
+}
+.light-theme .card {
+  background: #86c295;
+  color: #111;
+}
+.light-theme .card:hover {
+  background: #ddd;
+}
+.light-theme .win-message {
+  background: #ffc107;
+  color: #000;
+}/*# sourceMappingURL=styles.css.map */
